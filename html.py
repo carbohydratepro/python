@@ -85,5 +85,17 @@ def pro6():
   driver.close()
 
 
+def pro7():
+  driver = webdriver.Chrome()
+  text = "りんご"
+  url_text = "https://translate.google.co.jp/#ja/en/{0}".format(text)
+  url = urllib.parse.quote_plus(url_text, "/:?=&#")
+  driver.get(url)
+  ja = driver.find_element_by_css_selector("span[jsname='W297wb']")
+  print(ja.text)
+
+  driver.close()
+  driver.quit()
+
 if __name__ == '__main__':
     pro1()
