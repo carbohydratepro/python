@@ -68,10 +68,21 @@ def pro4():
 
 
 def pro5():  # webbrowser
-    driver = webdriver.Chrome()
-    driver.get("https://python.org")
-    time.sleep(10)
-    driver.quit()
+  driver = webdriver.Chrome()
+  driver.get("https://python.org")
+  time.sleep(10)
+  driver.quit()
+
+
+def pro6():
+  driver = webdriver.Chrome()
+  driver.get("https://google.com")
+  el = driver.find_element_by_name("q")
+  el.send_keys("google翻訳")
+  el.submit()
+
+  time.sleep(10)
+  driver.close()
 
 
 if __name__ == '__main__':
