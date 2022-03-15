@@ -68,34 +68,34 @@ def pro4():
 
 
 def pro5():  # webbrowser
-  driver = webdriver.Chrome()
-  driver.get("https://python.org")
-  time.sleep(10)
-  driver.quit()
+    driver = webdriver.Chrome()
+    driver.get("https://python.org")
+    time.sleep(10)
+    driver.quit()
 
 
 def pro6():
-  driver = webdriver.Chrome()
-  driver.get("https://google.com")
-  el = driver.find_element_by_name("q")
-  el.send_keys("google翻訳")
-  el.submit()
+    driver = webdriver.Chrome()
+    driver.get("https://google.com")
+    el = driver.find_element_by_name("q")
+    el.send_keys("google翻訳")
+    el.submit()
 
-  time.sleep(10)
-  driver.close()
+    time.sleep(10)
+    driver.close()
 
 
 def pro7():
-  driver = webdriver.Chrome()
-  text = "りんご"
-  url_text = "https://translate.google.co.jp/#ja/en/{0}".format(text)
-  url = urllib.parse.quote_plus(url_text, "/:?=&#")
-  driver.get(url)
-  ja = driver.find_element_by_css_selector("span[jsname='W297wb']")
-  print(ja.text)
+    driver = webdriver.Chrome()
+    text = "りんご"
+    url_text = "https://translate.google.co.jp/#ja/en/{0}".format(text)
+    url = urllib.parse.quote_plus(url_text, "/:?=&#")
+    driver.get(url)
+    ja = driver.find_element_by_css_selector("span[jsname='W297wb']")
+    print(ja.text)
 
-  driver.close()
-  driver.quit()
+    driver.close()
+    driver.quit()
 
 if __name__ == '__main__':
     pro1()
